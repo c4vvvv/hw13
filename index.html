@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>台中市景點</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
+        .container { width: 80%; margin: auto; }
+        .section { padding: 50px 0; display: flex; align-items: center; justify-content: space-between; }
+        .text { width: 45%; }
+
+        .banner { text-align: center; background: #425097; color: white; padding: 50px 0; }
+        .footer { text-align: center; padding: 20px 0; background: #425097; color: white; }
+
+        .image {
+            width: 45%; 
+            height: 250px; 
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden; 
+            border: 2px solid #425097;
+        }
+
+        .image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .zoom {
+            transition: transform 0.2s ease;
+        }
+
+        .zoom:hover {
+            transform: scale(1.5);
+        }
+
+        .navbar {
+            overflow: hidden;
+            background-color: #425097;
+            position: fixed;
+            top: 0;
+            width: 100%;
+        }
+
+        .navbar a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 15px 16px;
+            text-decoration: none;
+        }
+
+        .navbar a:hover {
+            background: white;
+            color: #425097;
+        }
+
+        .main {
+            margin-top: 30px;
+        }
+
+        .spacer {
+            height: 35px;
+        }
+
+        .mySlides {
+            display: none;
+            position: relative;
+        }
+
+        .mySlides img {
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+        }
+
+        .slideshow-container {
+            position: relative;
+            max-width: 1000px;
+            margin: auto;
+            overflow: hidden;
+            text-align: center;
+        }
+
+        .slideshow-text {
+            position: absolute;
+            bottom: 8px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            text-align: center;
+            width: 80%;
+        }
+
+        .dot {
+            height: 15px;
+            width: 15px;
+            margin: 0 4px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+        }
+
+        .dot.active {
+            background-color: #717171;
+        }
+    </style>
+    <!-- 放在 <head> 或 <body> 中 -->
+<link rel="stylesheet" type="text/css" href="https://cdn.pannellum.org/2.5/pannellum.css">
+<script type="text/javascript" src="https://cdn.pannellum.org/2.5/pannellum.js"></script>
+
+</head>
+
+<body>
+
+    <div class="navbar">
+        <a href="#home">首頁</a>
+        <a href="#s1">台中國家歌劇院</a>
+        <a href="#s2">台中洲際</a>
+        <a href="#s3">審計新村</a>
+        <a href="#s4">張家祖廟</a> <!-- 新增張家祖廟連結 -->
+    </div>
+
+    <div id="home" class="banner">
+        <h1>台中市景點推薦</h1>
+    </div>
+
+    <div>
+        <div class="slideshow-container">
+            <div class="mySlides fade">
+                <div class="numbertext"></div>
+                <img src="04.jpg" style="width:100%">
+                <div class="slideshow-text">台中市夜景</div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext"></div>
+                <img src="05.jpg" style="width:100%">
+                <div class="slideshow-text">台中國家歌劇院</div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext"></div>
+                <img src="06.jpg" style="width:100%">
+                <div class="slideshow-text">審計新村</div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext"></div>
+                <img src="07.jpg" style="width:100%">
+                <div class="slideshow-text">台中洲際</div>
+            </div>
+        </div>
+
+        <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span> <span class="dot" onclick="currentSlide(5)"></span>
+        </div>
+    </div>
+    
+    <div class="container">
+        <div class="section">
+            <div class="text">
+                
+                <h2  >臺中市</h2>
+                <div class="spacer"></div>
+                <p>臺中市，通稱臺中，簡稱「中」，為中華民國直轄市，臺灣六都之一，也是中臺灣唯一的直轄市。周邊與臺灣省的六個縣相鄰，北鄰苗栗縣、新竹縣，南鄰彰化縣、南投縣，東隔中央山脈與花蓮縣相鄰，東北以中央山脈和雪山山脈毗鄰宜蘭縣，西臨臺灣海峽。
+</p>
+            </div>
+            <div class="image">
+            <img  src="00.jpeg" class ="zoom" alt="台中市" > 
+        </div>
+    </div>    
+        <div id="s1"class="section">
+            <div class="text">
+               
+                <h2>台中國家歌劇院</h2>
+                <div class="spacer"></div>
+                <p>台中國家歌劇院位於台中市西屯區，是極具特色的大型公有展演空間，由日本建築師伊東豊雄設計，以人類最原始的「洞窟」、「地穴」的概念設計成世界獨一無二的美聲涵洞曲牆建築，歷時五年時間完成、耗資43.6億元，終在2014年11月23日落成啟用，內部規劃有大劇院、中劇院及小型實驗劇場，共可容納約三千餘人。</P>
+
+<p>圖：台中國家歌劇院白天景色</P>
+
+<p>所在位置：台中市西屯區惠來路二段101號
+
+</p>
+            </div>
+            <div class="image">
+
+            	<img  src= "01.jpeg"  class ="zoom" alt= "台中國家歌劇院">
+        </div>
+    </div>   
+        <div id="s2" class="section">
+            <div class="text">
+               
+                <h2>臺中洲際</h2>
+                 <div class="spacer"></div>
+                <p>臺中州廳位於台中市西區，為一座國定古蹟，二戰後由台中市政府遷入辦公，由於該建築原為日治時期的臺中州廳（即「州政府」），因而沿用此稱呼。周邊鄰近台中文學公園、台中刑務所演武場、宮原眼科等熱門景點。</p>
+
+
+<P>圖：臺中州廳</P>
+<p>所在位置：台中市西區民權路99號</p>
+            </div>
+            <div class="image">
+
+            	<img src= "02.jpeg"  class ="zoom" alt="台中洲際">
+        </div>
+     </div>   
+        <div id="s3" class="section">
+            <div class="text">
+               
+                <h2>審計新村</h2>
+                 <div class="spacer"></div>
+                <p>審計新村位於台中市西區，原為臺灣省政府審計處員工宿舍，在凍省之後成了閒置空間荒廢多年，近年配合台中市政府勞工局「摘星青年、築夢台中」創業基地進駐計畫，重新規劃轉型成為創業基地與文創園區。</p>
+
+<p>圖：審計新村</p>
+<P>所在位置：台中市西區民生路368巷</p>
+            </div>
+            <div class="image">
+
+            	<img  src= "03.jpeg"  class ="zoom" alt="審計新村">
+        </div>
+    </div>
+ </div>   
+
+<div id="s4" class="section">
+            <div class="text">
+                <h2>張家祖廟</h2>
+                <div class="spacer"></div>
+                <p>張家祖廟位於台中市南區，是當地的歷史文化古蹟，擁有悠久的歷史和精緻的建築。這座廟宇自清朝時期建立以來，成為當地居民信仰的重要場所，吸引了大量的信徒與遊客前來參拜。</p>
+                <p>圖：張家祖廟外觀</p>
+                <p>所在位置：台中市南區</p>
+            </div>
+    </div>
+        </div>
+
+       <!-- Pannellum 全景圖 -->
+<div class="section">
+    <div class="text">
+        <h2>張家祖廟全景圖</h2>
+        <p>透過360度全景，身歷其境感受張家祖廟的莊嚴與古韻。</p>
+    </div>
+    <div id="panorama" style="width: 800px; height: 400px;"></div>
+</div>
+
+
+        <script>
+            pannellum.viewer('panorama', {
+                "type": "equirectangular",
+                "panorama": "logo.jpg",  // 替換為張家祖廟全景圖片的路徑
+                "autoLoad": true
+            });
+        </script>
+
+    </div>
+    <div class="footer">
+<p>
+        <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1RLC7LMwrmCR-beewu9BzUrZggQ4ciJY&ehbc=2E312F" width="950" height="980"></iframe> </p>
+
+        <p>版權所有 &copy; 2025 陳旻薇</p>
+        <A href=" mailto: q0981576058@gmail.com ">✉️寄送郵件</A>
+    </div>
+
+<script>
+let slideIndex = 1; // 初始幻燈片索引設為 1
+let autoSlideTimer; // 設置計時器變數
+
+showSlides(slideIndex); // 初始化幻燈片
+
+// 主要的 showSlides()，接受參數來手動切換
+function showSlides(n) {
+    let slides = document.getElementsByClassName("mySlides");
+    let dots = document.getElementsByClassName("dot");
+
+    if (n > slides.length) { slideIndex = 1; }
+    if (n < 1) { slideIndex = slides.length; }
+
+    // 隱藏所有幻燈片
+    for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+
+    // 移除 dot 樣式
+    for (let i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+
+    // 顯示當前幻燈片
+    slides[slideIndex - 1].style.display = "block";
+    dots[slideIndex - 1].className += " active";
+
+    // 重新啟動計時器
+    clearTimeout(autoSlideTimer);
+    autoSlideTimer = setTimeout(() => plusSlides(1), 3000); // 3秒後自動切換
+}
+
+// 左右切換功能
+function plusSlides(n) {
+    showSlides(slideIndex += n);
+}
+
+// 點擊小圓點切換
+function currentSlide(n) {
+    showSlides(slideIndex = n);
+}
+
+   window.onload = function () {
+        pannellum.viewer('panorama', {
+            "type": "equirectangular",
+            "panorama": "logo.jpg",
+            "autoLoad": true
+        });
+    };
+</script>
+
+
+
+
+</body>
+</html>
