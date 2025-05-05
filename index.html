@@ -113,6 +113,12 @@
         .dot.active {
             background-color: #717171;
         }
+
+        #panorama {
+    margin: 0 auto; /* 圖片區塊水平方向置中 */
+    display: block;
+}
+
     </style>
     <!-- 放在 <head> 或 <body> 中 -->
 <link rel="stylesheet" type="text/css" href="https://cdn.pannellum.org/2.5/pannellum.css">
@@ -233,27 +239,22 @@
     </div>
  </div>   
 
-<div id="s4" class="section">
-            <div class="text">
-                <h2>張家祖廟</h2>
-                <div class="spacer"></div>
-                <p>張家祖廟位於台中市南區，是當地的歷史文化古蹟，擁有悠久的歷史和精緻的建築。這座廟宇自清朝時期建立以來，成為當地居民信仰的重要場所，吸引了大量的信徒與遊客前來參拜。</p>
-                <p>圖：張家祖廟外觀</p>
-                <p>所在位置：台中市南區</p>
-            </div>
-    </div>
+<div class="container">
+    <div id="s4" class="section">
+        <div class="text">
+            <h2>張家祖廟</h2>
+            <div class="spacer"></div>
+            <p>張家祖廟位於台中市南區，是當地的歷史文化古蹟，擁有悠久的歷史和精緻的建築。這座廟宇自清朝時期建立以來，成為當地居民信仰的重要場所，吸引了大量的信徒與遊客前來參拜。</p>
+            <p>所在位置：台中市南區</p>
         </div>
-
-       <!-- Pannellum 全景圖 -->
-<div class="section">
-    <div class="text">
-        <h2>張家祖廟全景圖</h2>
-        <p>透過360度全景，身歷其境感受張家祖廟的莊嚴與古韻。</p>
+        <div class="image">
+            <img src="logo.jpg" class="zoom" alt="張家祖廟">
+        </div>
     </div>
-    <div id="panorama" style="width: 800px; height: 400px;"></div>
-</div>
 
-
+    <!-- 張家祖廟全景圖區塊 -->
+    <div class="section">
+        <div id="panorama" style="width: 800px; height: 400px; margin: 0 auto;"></div>
         <script>
             pannellum.viewer('panorama', {
                 "type": "equirectangular",
@@ -261,6 +262,26 @@
                 "autoLoad": true
             });
         </script>
+    </div>
+</div>
+
+
+    </div>
+    <!-- 張家祖廟全景圖區塊 -->
+<div class="section">
+    
+    <div id="panorama" style="width: 800px; height: 400px;"></div>
+     <script>
+            pannellum.viewer('panorama', {
+                "type": "equirectangular",
+                "panorama": "logo.jpg",  // 替換為張家祖廟全景圖片的路徑
+                "autoLoad": true
+            });
+        </script>
+</div>
+</div>
+
+       
 
     </div>
     <div class="footer">
